@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CompuCenter - Componentes de PC</title>
+  <link rel="stylesheet" href="css.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>CompuCenter</h1>
+        <p class="tagline">Venta de Componentes de PC en Línea</p>
+      </div>
+      <div class="header-right">
+        <input class="search" placeholder="Buscar productos..." />
+        <div class="cart">Carrito: <strong>0</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs wrap">
+    <a href="#">Inicio</a> › <a href="#">Tienda</a> › <span>Componentes Destacados</span>
+  </nav>
+
+  <main class="wrap site-main">
+    <section class="content">
+      <h2 class="section-title">Componentes Destacados</h2>
+
+      <!-- Grid de productos: cada .product imita la tarjeta / página de producto -->
+      <div class="products-grid">
+
+        <!-- Producto 1 -->
+        <article class="product">
+          <div class="product-media">
+            <!-- REEMPLAZAR LINK_IMAGEN_1 por la URL de tu imagen -->
+            <img src="3050.jpg" alt="NVIDIA RTX 3050" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">NVIDIA GeForce RTX 3050</h3>
+            <div class="rating">★★★★★ <span class="reviews">(12 reseñas)</span></div>
+            <div class="price">$249.00</div>
+            <p class="excerpt">Tarjeta gráfica para gaming 1080p con soporte Ray Tracing y DLSS. Buena eficiencia y rendimiento para jugadores que buscan valor.</p>
+            <div class="actions">
+              <label>Cantidad: <input type="number" min="1" value="1" /></label>
+              <button class="btn add">Añadir al carrito</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="product">
+          <div class="product-media">
+            <img src="i5.jpg" alt="Intel Core i5-12400F" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Intel Core i5-12400F</h3>
+            <div class="rating">★★★★☆ <span class="reviews">(8 reseñas)</span></div>
+            <div class="price">$179.00</div>
+            <p class="excerpt">Procesador 6 núcleos / 12 hilos - excelente para gaming y productividad con buen consumo energético.</p>
+            <div class="actions">
+              <label>Cantidad: <input type="number" min="1" value="1" /></label>
+              <button class="btn add">Añadir al carrito</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="product">
+          <div class="product-media">
+            <img src="r5.jpg" alt="AMD Ryzen 5" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">AMD Ryzen 5</h3>
+            <div class="rating">★★★★☆ <span class="reviews">(15 reseñas)</span></div>
+            <div class="price">$159.00</div>
+            <p class="excerpt">Ryzen 5: buen rendimiento en multitarea y gaming; relación calidad-precio destacada.</p>
+            <div class="actions">
+              <label>Cantidad: <input type="number" min="1" value="1" /></label>
+              <button class="btn add">Añadir al carrito</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 4 (Case) -->
+        <article class="product">
+          <div class="product-media">
+            <img src="case.jpg" alt="Case Gamer RGB" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Case Gamer RGB</h3>
+            <div class="rating">★★★☆☆ <span class="reviews">(4 reseñas)</span></div>
+            <div class="price">$89.00</div>
+            <p class="excerpt">Gabinete con panel lateral de vidrio, soporte para radiadores y ventiladores RGB. Buen flujo de aire y estética gamer.</p>
+            <div class="actions">
+              <label>Cantidad: <input type="number" min="1" value="1" /></label>
+              <button class="btn add">Añadir al carrito</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 5 (Disipador) -->
+        <article class="product">
+          <div class="product-media">
+            <img src="cooler.jpg" alt="Disipador Tower Cooler" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Disipador Tower Cooler</h3>
+            <div class="rating">★★★★☆ <span class="reviews">(9 reseñas)</span></div>
+            <div class="price">$49.00</div>
+            <p class="excerpt">Disipador tipo torre con heatpipes de cobre y ventilador silencioso. Excelente para mantener temperaturas bajas.</p>
+            <div class="actions">
+              <label>Cantidad: <input type="number" min="1" value="1" /></label>
+              <button class="btn add">Añadir al carrito</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="widget">
+        <h4>Buscar productos</h4>
+        <input class="widget-search" placeholder="Buscar..." />
+      </div>
+
+      <div class="widget">
+        <h4>Categorías</h4>
+        <ul class="categories">
+          <li><a href="#">Tarjetas de video</a></li>
+          <li><a href="#">Procesadores</a></li>
+          <li><a href="#">Gabinetes</a></li>
+          <li><a href="#">Disipadores</a></li>
+          <li><a href="#">Placas madre</a></li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h4>Filtrar por precio</h4>
+        <p>desde $0 a $300+</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-left">© 2025 CompuCenter</div>
+      <div class="footer-right">Soporte • Términos • Política de privacidad</div>
+    </div>
+  </footer>
+</body>
+</html>

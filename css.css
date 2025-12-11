@@ -1,0 +1,137 @@
+/* styles.css - estilo tipo WordPress / WooCommerce */
+:root{
+  --accent:#2271b1;
+  --muted:#777;
+  --card-bg:#fff;
+  --wrap:1100px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background:#f6f6f6;
+  color:#222;
+  line-height:1.4;
+}
+
+/* contenedor centrado */
+.wrap{
+  max-width:var(--wrap);
+  margin:0 auto;
+  padding:0 18px;
+}
+
+/* HEADER */
+.site-header{
+  background:var(--accent);
+  color:white;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+.site-header .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+}
+.brand h1{margin:0;font-size:24px;letter-spacing:0.5px}
+.brand .tagline{margin:4px 0 0;font-size:13px;opacity:.95}
+.header-right{display:flex;gap:12px;align-items:center}
+.search, .widget-search {padding:8px 10px;border-radius:4px;border:1px solid #ddd}
+.cart{background:rgba(255,255,255,0.08);padding:8px 10px;border-radius:4px;font-size:14px}
+
+/* breadcrumbs */
+.breadcrumbs{font-size:13px;color:var(--muted);margin:18px auto}
+.breadcrumbs a{color:var(--muted);text-decoration:none}
+
+/* MAIN LAYOUT */
+.site-main{
+  display:grid;
+  grid-template-columns: 1fr 320px; /* contenido + sidebar */
+  gap:28px;
+  margin:0 auto;
+  padding:10px 0 50px;
+}
+
+/* SECTION TITLE */
+.section-title{
+  font-size:26px;
+  margin:6px 0 18px;
+  color:#111;
+}
+
+/* PRODUCTS GRID - lista de productos estilo tienda */
+.products-grid{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+/* Producto - imita la tarjeta/página pequeña con media a la izquierda */
+.product{
+  display:flex;
+  gap:22px;
+  background:var(--card-bg);
+  border-radius:6px;
+  padding:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  align-items:flex-start;
+}
+
+/* media */
+.product-media{
+  flex:0 0 220px;
+  max-width:220px;
+}
+.product-media img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:6px;
+  background:#eee;
+  border:1px solid #e6e6e6;
+}
+
+/* info */
+.product-info{flex:1;min-width:0}
+.product-title{margin:0 0 6px;font-size:18px;color:#111}
+.rating{color:#f1c40f;font-size:14px;margin-bottom:8px}
+.reviews{color:var(--muted);font-size:13px;margin-left:8px}
+.price{
+  font-size:20px;
+  color:var(--accent);
+  font-weight:700;
+  margin:6px 0 12px;
+}
+.excerpt{color:var(--muted);margin:0 0 14px}
+
+/* acciones */
+.actions{display:flex;gap:12px;align-items:center}
+.actions input[type="number"]{
+  width:70px;padding:6px;border-radius:4px;border:1px solid #ddd;
+}
+.btn{
+  background:#444;color:white;padding:9px 14px;border-radius:6px;border:none;cursor:pointer;
+}
+.btn.add{background:var(--accent);}
+
+/* SIDEBAR */
+.sidebar{background:transparent}
+.widget{background:var(--card-bg);padding:14px;border-radius:6px;margin-bottom:16px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.widget h4{margin:0 0 8px;font-size:15px}
+.categories{list-style:none;padding:0;margin:0}
+.categories li{padding:6px 0;border-bottom:1px solid #f2f2f2}
+.categories a{color:#2271b1;text-decoration:none;font-size:14px}
+
+/* FOOTER */
+.site-footer{background:#222;color:#cfcfcf;padding:18px 0;margin-top:28px}
+.site-footer .wrap{display:flex;justify-content:space-between;font-size:14px}
+
+/* Responsive */
+@media (max-width:1000px){
+  .site-main{grid-template-columns:1fr}
+  .site-header .wrap{flex-direction:column;gap:10px;align-items:flex-start}
+  .product{flex-direction:column}
+  .product-media{width:100%;max-width:none}
+  .product-media img{height:260px}
+}
